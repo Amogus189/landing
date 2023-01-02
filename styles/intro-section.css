@@ -1,0 +1,328 @@
+.section-intro {
+  height: 100vh;
+  color: white;
+}
+
+.intro-section-main__bg {
+  height: 80%;
+  position: relative;
+  background-image: url(../assets/images/eagle.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.intro-section-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.intro-section-main__bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to bottom,
+    var(--gradient-top-color),
+    var(--gradient-bottom-color)
+  );
+  opacity: 0.95;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.header-nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-nav__list-item {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.header-nav__list-item a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.header-nav__list-item a::before {
+  position: absolute;
+  inset: auto 0 -7px 0;
+  height: 2px;
+}
+
+.header-nav__list-item a:hover::before {
+  content: "";
+  background-color: white;
+}
+
+.header-nav__list-item a:focus {
+  color: var(--gradient-bottom-color);
+}
+
+.header-nav__list-item a:focus .nav-icon {
+  fill: var(--gradient-bottom-color);
+}
+
+.header-nav__list-item a:focus::before {
+  content: "";
+  background-color: var(--gradient-bottom-color);
+}
+
+.nav-icon {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: white;
+}
+
+.intro-section-main__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.intro-section-main__content h2 {
+  font-family: "Kaushan Script";
+  font-size: clamp(1rem, 4vw + 0.1rem, 3rem);
+  font-weight: normal;
+}
+
+.intro-section-main__content h1 {
+  font-weight: 900;
+  font-size: clamp(1.5rem, 9vw + 0.1rem, 7rem);
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 10ch;
+  line-height: 1;
+}
+
+.intro-section-main__content hr {
+  width: 4rem;
+  border: none;
+  height: 3px;
+  background-color: white;
+}
+
+.intro-section-main__content a {
+  color: white;
+  border: 3px solid white;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.75rem;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.intro-section-main__content a:hover {
+  color: var(--gradient-top-color);
+  border-color: var(--gradient-top-color);
+}
+
+.intro-section-main_info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.intro-info {
+  opacity: 0.6;
+  flex-grow: 1;
+  text-transform: uppercase;
+}
+
+.intro-info__line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin-bottom: min(1rem, 2vw);
+}
+
+.intro-info__count {
+  font-size: min(1.25rem, 4vw);
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.intro-info__text {
+  font-size: min(1rem, 3vw);
+  font-weight: bold;
+}
+
+.intro-info_active {
+  opacity: 1;
+}
+
+.intro-info_active .intro-info__line {
+  position: relative;
+}
+
+.intro-info_active .intro-info__line::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 30%;
+  background-color: var(--gradient-top-color);
+}
+
+.intro-section-main__footer {
+  height: 20%;
+  background-color: var(--color-aqua);
+}
+
+.intro-section-main__footer-content {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-section-main__footer-content > * {
+  flex-basis: 100%;
+}
+
+.intro-footer__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+
+.intro-footer__list-item::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 1px;
+  background-color: white;
+  opacity: 0.3;
+}
+
+.intro-footer__list-item:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 1px;
+  background-color: white;
+  opacity: 0.3;
+}
+
+.intro-footer__list-item-value {
+  font-weight: 900;
+  font-size: clamp(1rem, 8vw + 0.1rem, 3.5rem);
+}
+
+.intro-footer__list-item-text {
+  font-weight: bold;
+  font-size: clamp(0.7rem, 2vw + 0.1rem, 0.8rem);
+}
+
+.header-nav-mobile__open-button {
+  --nav-btn-size: 32px;
+  width: var(--nav-btn-size);
+  height: var(--nav-btn-size);
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid white;
+  display: none;
+}
+
+.header-nav-mobile__open-button svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+
+.header-nav-mobile__open-button:focus {
+  pointer-events: none;
+}
+
+.header-nav-mobile__open-button:focus + .header-nav-desktop,
+.header-nav-desktop:active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 992px) {
+  .header-nav-desktop {
+    position: absolute;
+    inset: 0;
+    background-color: var(--gradient-top-color);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --corner-gap: 1.5rem;
+  }
+
+  .header-nav-desktop::before,
+  .header-nav-desktop::after {
+    content: "";
+    position: absolute;
+    inset: var(--corner-gap) var(--corner-gap) auto auto;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+  }
+
+  .header-nav-desktop::before {
+    transform: rotate(45deg);
+  }
+
+  .header-nav-desktop::after {
+    transform: rotate(135deg);
+  }
+
+  .intro-section-main {
+    padding: 1rem;
+  }
+
+  .intro-section-main__content h2 {
+    font-size: max(0.75rem, 6vw + 1rem);
+  }
+
+  .intro-section-main__content h1 {
+    font-size: max(1rem, 12vw + 1rem);
+  }
+
+  .header-nav-mobile__open-button {
+    display: block;
+    padding: 5px;
+  }
+
+  .header-nav__list {
+    flex-direction: column;
+  }
+
+  .header-nav__list-item {
+    font-size: 1rem;
+  }
+}

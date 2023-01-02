@@ -1,0 +1,41 @@
+footer {
+  height: 15vh;
+  background-image: url(../assets/images/green-landscape-topography.jpg);
+  background-size: cover;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__icon {
+  --size: 24px;
+  width: var(--size);
+  height: var(--size);
+  fill: var(--gradient-top-color);
+}
+
+.footer__text {
+  text-transform: uppercase;
+  font-size: clamp(0.85rem, 3vw + 0.1rem, 1.25rem);
+  font-weight: 900;
+  color: var(--gradient-top-color);
+}
+
+.footer__line {
+  width: 4rem;
+  border: none;
+  background-color: var(--gradient-top-color);
+  height: 3px;
+}
