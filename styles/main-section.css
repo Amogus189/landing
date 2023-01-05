@@ -58,11 +58,11 @@
 .accordion-section {
   display: flex;
   justify-content: space-between;
-  max-height: 300px;
 }
 
 .accordion-section__image {
   width: 47%;
+  max-height: 300px;
   object-fit: cover;
   transition: filter 0.3s ease;
 }
